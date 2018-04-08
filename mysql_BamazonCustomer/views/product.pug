@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title=pagename
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Raleway:400,700")
+        link(rel="stylesheet", href="css/style.css")
+    body
+        header
+            div(class="container")  
+                div(class="header")
+                    div
+                        h1(class="raleway")
+                            a(href="/")=pagename
+        div(class="content")
+            div(class="container")
+                div(class="productpage raleway")
+                    h1(class="text_center merriweather") Are You Sure You Want To Buy
+                    br
+                    br
+                    h1(class="text_center merriweather")= product.dataValues.product_name
+                    p(class="text_center")= product.dataValues.item_id
+                    br
+                    br
+                    p(class="text_center") Cost #{product.dataValues.product_price}
+                    p(class="text_center") Stock #{product.dataValues.product_stock}
+                    br
+                    br
+                    div(class="buttons")
+                        form(action="/buyitem",method="post")
+                            input(type="hidden", name="productid",value=product.dataValues.item_id)
+                            label(for="#quantity") quantity
+                            br
+                            input(type="number", name="quantity" min="0",id="quantity")
+                            br
+                            br
+                            button(class="buttonyes",type="submit") Yes
+                            br
+                        a(href="/")
+                            button(class="buttonno") No

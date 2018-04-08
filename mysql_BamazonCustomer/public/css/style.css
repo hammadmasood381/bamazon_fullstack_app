@@ -1,0 +1,162 @@
+/*CSS RESET*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*CSS RESET END*/
+
+header {
+    background: #000;
+    color: #FFF;
+    padding: 25px 0;
+}
+
+header .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .header h1 a {
+    font-size: 3em;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.content .products {
+    margin: 50px 0;
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.content .products .product {
+    margin: 10px;
+    padding: 25px;
+    background: rgba(0,0,0,.1);
+    border-radius: 10px;
+    width: calc(100% / 3 - 70px)
+}
+
+.content .products .product .productname {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.content .products .product .productid {
+    font-size: 1em;
+    font-style: italic;
+}
+
+.content .products .product .productdep {
+    font-size: 1em;
+}
+
+.content .products .product .productprice {
+    font-size: 1em;
+}
+
+.content .products .product .productstock {
+    font-size: 1em;
+}
+
+.content .products .product .productbutton {
+    font-family: 'Raleway', sans-serif;
+    background: #333;
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+}
+
+.content .productpage {
+    padding: 100px 0;
+}
+
+.content .productpage h1 {
+    font-size: 3em;
+}
+
+.content .productpage p {
+    font-size: 1.5em;
+}
+
+.content .productpage .buttons {
+    text-align: center;
+}
+
+.content .productpage .buttons .buttonyes {
+    background: rgb(126, 197, 130);
+    border: none;
+    color: #FFF;
+    font-size: 1.5em;
+    padding: 20px 40px;
+}
+
+.content .productpage .buttons .buttonno{
+    background: rgb(197, 126, 126);
+    border: none;
+    color: #FFF;
+    font-size: 1.5em;
+    padding: 20px 40px;
+}
+
+/*UTIL*/
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.raleway {
+    font-family: 'Raleway', sans-serif;
+}
+
+.merriweather {
+    font-family: 'Merriweather', serif;
+}
+
+.text_center {
+    text-align: center;
+}
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title= Bamazon
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Raleway:400,700")
+        link(rel="stylesheet", href="css/style.css")
+    body
+        header
+            div(class="container")  
+                div(class="header")
+                    div
+                        h1(class="raleway")
+                            a(href="/")=pagename
+
+        div(class="content raleway")
+            div(class="container")  
+                div(class="products")
+                    each product in products
+                        div(class="product")
+                            h2(class="merriweather productname")= product.dataValues.product_name
+                            p(class="productid")= product.dataValues.item_id
+                            br
+                            p(class="productdep") Department: #{product.dataValues.department_name}
+                            br
+                            p(class="productprice") Price: #{product.dataValues.product_price}
+                            br
+                            p(class="productstock") Stock: #{product.dataValues.product_stock}
+                            br
+                            a(href="/" + product.dataValues.item_id)
+                                button(class="productbutton") Buy
+
+    
